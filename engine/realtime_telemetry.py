@@ -143,10 +143,18 @@ def resolve_dynamic_location(query: str) -> Optional[Dict[str, Any]]:
 
 
 def get_api_key(key_name: str) -> Optional[str]:
-    """Retrieves API key from environment variable, .env file, or session."""
+    """Retrieves API key from environment variable, Streamlit secrets, or .env file."""
     val = os.environ.get(key_name)
     if val and val.strip():
         return val.strip()
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and key_name in st.secrets:
+            sec_val = str(st.secrets[key_name]).strip()
+            if sec_val:
+                return sec_val
+    except Exception:
+        pass
     env_file = os.path.join(os.path.dirname(__file__), "..", ".env")
     if os.path.exists(env_file):
         try:

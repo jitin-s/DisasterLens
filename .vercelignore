@@ -1,0 +1,8 @@
+# Ignore heavy local and Streamlit files during Vercel Serverless Function build
+requirements.txt
+.wheels/
+.venv/
+tests/
+data/all_india_zones.json
+data/zones_seed.json
+docs/

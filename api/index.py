@@ -16,12 +16,12 @@ HTML_CONTENT = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DisasterLens | National Disaster Portal</title>
+    <title>DisasterLens | National AI Predictive Portal</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f8fafc;
-            color: #0f172a;
+            background-color: #0b0f19;
+            color: #f8fafc;
             margin: 0;
             padding: 40px 20px;
             display: flex;
@@ -30,60 +30,86 @@ HTML_CONTENT = """<!DOCTYPE html>
             min-height: 80vh;
         }
         .card {
-            background: white;
-            border: 1px solid #cbd5e1;
-            border-radius: 12px;
-            padding: 32px;
+            background: #111827;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 14px;
+            padding: 36px;
             max-width: 650px;
-            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
         .tricolor {
-            height: 6px;
+            height: 4px;
             background: linear-gradient(90deg, #FF9933 33.3%, #ffffff 33.3%, #ffffff 66.6%, #138808 66.6%);
             border-radius: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        h1 { font-size: 24px; color: #1e40af; margin-bottom: 8px; }
-        p { font-size: 15px; color: #475569; line-height: 1.6; }
+        h1 { font-size: 26px; color: #ffffff; margin-bottom: 6px; font-weight: 800; }
+        .subtitle { font-size: 13px; color: #38bdf8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+        p { font-size: 14px; color: #94a3b8; line-height: 1.6; }
+        .stats-grid {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .stat-pill {
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
         .btn {
             display: inline-block;
-            background-color: #1e40af;
-            color: white !important;
-            padding: 12px 24px;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff !important;
+            padding: 12px 26px;
             border-radius: 8px;
             font-weight: 700;
             text-decoration: none;
-            margin-top: 16px;
-            transition: background 0.2s;
+            margin-top: 18px;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+            transition: all 0.2s ease;
         }
-        .btn:hover { background-color: #1d4ed8; }
+        .btn:hover { background: #0284c7; transform: translateY(-1px); }
         .note {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 8px;
-            padding: 12px;
-            font-size: 13px;
-            color: #1e40af;
+            padding: 14px;
+            font-size: 12.5px;
+            color: #cbd5e1;
             margin-top: 20px;
             text-align: left;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="tricolor"></div>
-        <div style="font-size: 40px;">🏛️</div>
-        <h1>DisasterLens: National Decision Support Portal</h1>
-        <p><strong>Government of India / NDMA Decision-Support Engine</strong></p>
-        <p>105 Real Disaster Locations in India &bull; Live Telemetry &bull; Predictive ML Severity &bull; Constrained Resource Optimization &bull; AI Disaster Sahayak Chatbot</p>
+        <div style="font-size: 42px; margin-bottom: 10px;">🛡️</div>
+        <h1>DisasterLens</h1>
+        <div class="subtitle">National AI Multi-Hazard Predictive Intelligence</div>
+        <p>Pan-India Real-Time Atmospheric Radar & Telemetry &bull; Predictive ML Severity &bull; Constrained Golden-Hour Evacuation &bull; Bilingual AI Disaster Sahayak</p>
         
+        <div class="stats-grid">
+            <div class="stat-pill">🛰️ 632 Districts Ingested</div>
+            <div class="stat-pill">📡 SACHET CAP v1.2 Live</div>
+            <div class="stat-pill">⚡ 10-Min Live Radar Sync</div>
+        </div>
+
         <div class="note">
-            <strong>🚀 Live Deployment Notice:</strong><br>
-            Streamlit requires active WebSocket streaming for live interactive maps and AI chats. For optimal performance with 0 timeouts, DisasterLens is deployed on <strong>Streamlit Community Cloud</strong> or containerized via <strong>Docker / Cloud Run</strong>.
+            <strong style="color: #38bdf8;">🚀 Cloud Deployment Architecture:</strong><br>
+            DisasterLens leverages interactive WebSocket streaming for real-time Folium radar maps and predictive AI inferences. For 100% interactive live streaming with zero timeouts, launch directly on <strong>Streamlit Community Cloud</strong> (free) or connect via <strong>Vercel / Docker</strong>.
         </div>
         
-        <a href="https://share.streamlit.io" target="_blank" class="btn">Open DisasterLens on Streamlit Cloud &rarr;</a>
+        <a href="https://share.streamlit.io" target="_blank" class="btn">Launch DisasterLens Command Center &rarr;</a>
     </div>
 </body>
 </html>

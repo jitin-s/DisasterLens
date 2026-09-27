@@ -1,0 +1,21 @@
+{
+  "model_engine": "NumPy-FastSeverityModel",
+  "train_r2": 0.8323,
+  "test_r2": 0.8228,
+  "test_rmse": 0.0295,
+  "test_mae": 0.0234,
+  "feature_importances": {
+    "rainfall_mm_h": 0.3110416211469711,
+    "wind_gust_kmh": 0.2472399667833482,
+    "elevation_m": 0.009233244700671852,
+    "drainage_capacity": 0.004178441665617374,
+    "flood_gauge_m": 0.3050193050618636,
+    "population_density": 0.004563586005746843,
+    "road_connectivity_pct": 0.008820393286639859,
+    "power_grid_status_pct": 0.09468630399655174,
+    "elderly_ratio": 0.0020834798856157266,
+    "pediatric_ratio": 0.006806119303442278,
+    "mobility_impaired_ratio": 0.004921952362473454,
+    "poverty_ratio": 0.0014055858010577306
+  }
+}

@@ -1,0 +1,12 @@
+streamlit>=1.36.0
+xgboost>=2.0.0
+shap>=0.45.0
+scipy>=1.13.0
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+plotly>=5.22.0
+folium>=0.16.0
+streamlit-folium>=0.20.0
+requests>=2.31.0
+pytest>=8.0.0

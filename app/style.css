@@ -1,0 +1,547 @@
+/* ====================================================================
+   DisasterLens: National AI Multi-Hazard Predictive Intelligence Portal
+   Command Center Dark Obsidian Theme • High-Tech • Clean & Uncluttered
+   ==================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --bg-canvas: #0b0f19;
+    --bg-sidebar: #0f172a;
+    --bg-card: #111827;
+    --bg-card-hover: #161e31;
+    --bg-elevated: #1e293b;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(56, 189, 248, 0.3);
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-crimson: #ef4444;
+}
+
+/* 1. Global Page Reset & Command Center Background */
+html, body, .stApp, div[data-testid="stAppViewContainer"] {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background-color: var(--bg-canvas) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Typography & Contrast Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stMarkdownContainer"] li {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+strong, b {
+    color: #f8fafc !important;
+}
+
+/* Ensure Streamlit widget labels are crystal clear */
+label[data-testid="stWidgetLabel"],
+div[data-testid="stWidgetLabel"] label,
+div[data-testid="stWidgetLabel"] p {
+    color: #cbd5e1 !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Top Tricolor Accent Bar (Saffron, White, Green) */
+.gov-tricolor-bar {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #FF9933 0%, #FF9933 33.3%, #ffffff 33.3%, #ffffff 66.6%, #138808 66.6%, #138808 100%);
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0px;
+    box-shadow: 0 0 10px rgba(255, 153, 51, 0.3);
+}
+
+/* Command Center Top Header */
+.gov-portal-header {
+    background: linear-gradient(180deg, #111827 0%, #0d131f 100%);
+    border: 1px solid var(--border-subtle);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.gov-brand-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.gov-title-hindi {
+    font-size: 12px;
+    font-weight: 700;
+    color: #f59e0b !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.gov-title-english {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.gov-sub-dept {
+    font-size: 13px;
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.gov-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Glowing Live Alerts Badge */
+.gov-live-badge {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34d399 !important;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: cmd-pulse 2s infinite;
+}
+
+@keyframes cmd-pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Sidebar Dark Styling */
+section[data-testid="stSidebar"] {
+    background-color: var(--bg-sidebar) !important;
+    border-right: 1px solid #1e293b !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p,
+section[data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] span {
+    color: #cbd5e1 !important;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+}
+
+/* Streamlit Native Metric Card Overrides */
+div[data-testid="stMetric"] {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+div[data-testid="stMetric"]:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-1px);
+}
+
+div[data-testid="stMetric"] label {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    color: var(--text-muted) !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+/* Streamlit Inputs, Dropdowns, and Sliders */
+input, select, textarea, div[data-baseweb="select"] > div {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+input:focus, select:focus, div[data-baseweb="select"]:focus-within {
+    border-color: var(--accent-cyan) !important;
+    box-shadow: 0 0 0 1px var(--accent-cyan) !important;
+}
+
+div[data-baseweb="select"] span {
+    color: #ffffff !important;
+}
+
+div[data-baseweb="popover"], ul[role="listbox"] {
+    background-color: #111827 !important;
+    border: 1px solid #334155 !important;
+}
+
+li[role="option"] {
+    color: #cbd5e1 !important;
+}
+
+li[role="option"]:hover, li[aria-selected="true"] {
+    background-color: #1e293b !important;
+    color: var(--accent-cyan) !important;
+}
+
+/* Streamlit Buttons */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(56, 189, 248, 0.4) !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(2, 132, 199, 0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+button[kind="primary"]:hover {
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.5) !important;
+    transform: translateY(-1px);
+}
+
+button[kind="secondary"] {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+button[kind="secondary"]:hover {
+    background: #334155 !important;
+    border-color: #475569 !important;
+    color: #ffffff !important;
+}
+
+/* Streamlit Tabs Navigation */
+div[data-testid="stTabs"] div[role="tablist"] {
+    background-color: #0f172a;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    gap: 6px;
+}
+
+div[data-testid="stTabs"] button[role="tab"] {
+    color: var(--text-muted) !important;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    transition: all 0.2s ease;
+}
+
+div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+    color: #ffffff !important;
+    background: #1e293b !important;
+    border: 1px solid var(--border-highlight) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+div[data-testid="stTabs"] button[role="tab"]:hover {
+    color: var(--accent-cyan) !important;
+}
+
+/* Streamlit Radio / Domain Pill Selector */
+div[data-testid="stRadio"] > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+div[data-testid="stRadio"] label {
+    background: #111827 !important;
+    border: 1px solid #1e293b !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+div[data-testid="stRadio"] label div,
+div[data-testid="stRadio"] label p,
+div[data-testid="stRadio"] label span {
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+}
+
+div[data-testid="stRadio"] label:hover {
+    border-color: var(--accent-cyan) !important;
+    background: #161e31 !important;
+}
+
+div[data-testid="stRadio"] label:hover p,
+div[data-testid="stRadio"] label:hover span {
+    color: #ffffff !important;
+}
+
+/* Streamlit Alert Callouts */
+div[data-testid="stAlert"] {
+    background-color: #111827 !important;
+    border: 1px solid #1e293b !important;
+    border-radius: 8px !important;
+    color: #f8fafc !important;
+}
+
+div[data-testid="stAlert"] p,
+div[data-testid="stAlert"] span {
+    color: #f8fafc !important;
+}
+
+/* Specialized Command Center Cards */
+.cmd-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    margin-bottom: 14px;
+}
+
+.cmd-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.cmd-card-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+}
+
+/* OPI Priority Arc Gauge Card */
+.opi-hero-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(17, 24, 39, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.opi-hero-score {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+/* Golden Hour Digital Countdown Clocks */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.clock-row {
+    background: #0d131f;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.clock-timer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.clock-crimson {
+    color: #f87171;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+.clock-amber {
+    color: #fbbf24;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.clock-emerald {
+    color: #34d399;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Live Government Alerts Ticker */
+.ticker-box {
+    background: rgba(17, 24, 39, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px 16px;
+    height: 100%;
+}
+
+.ticker-item {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ticker-item:last-child {
+    border-bottom: none;
+}
+
+/* Agency Directive Checklist */
+.directive-box {
+    background: rgba(17, 24, 39, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px 16px;
+    height: 100%;
+}
+
+.directive-item {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #e2e8f0;
+}
+
+.directive-item:last-child {
+    border-bottom: none;
+}
+
+/* Dataframe & Table Dark Overrides */
+div[data-testid="stDataFrame"], div[data-testid="stTable"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* Expander Overrides */
+div[data-testid="stExpander"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+div[data-testid="stExpander"] details summary {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Low-Bandwidth Mode Output Box */
+.low-bw-box {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #05080f;
+    color: #38bdf8;
+    border: 1px solid #0284c7;
+    border-radius: 8px;
+    padding: 16px;
+    white-space: pre-wrap;
+    box-shadow: 0 0 20px rgba(2, 132, 199, 0.15);
+}
+
+/* Prediction Cards */
+.prediction-card {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.prediction-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.prediction-title {
+    font-weight: 800;
+    font-size: 14px;
+    color: #f8fafc;
+}
+
+
+

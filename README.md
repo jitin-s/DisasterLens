@@ -136,7 +136,7 @@ flowchart TD
 
 ---
 
-## 🔬 Mathematical & Physics Formulations
+#### 🔬 Mathematical & Physics Formulations
 
 ### 1. UN INFORM Operational Priority Index (OPI)
 

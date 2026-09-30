@@ -2,9 +2,9 @@
 
 This guide explains how to deploy DisasterLens to **Vercel**, **Streamlit Community Cloud**, or **Docker/Render**.
 
----
+----
 
-## Option 1: Deploy on Vercel (Step-by-Step)
+### Option 1: Deploy on Vercel (Step-by-Step)
 
 The repository comes pre-configured with [`vercel.json`](file:///D:/DisasterLens/vercel.json) and [`api/index.py`](file:///D:/DisasterLens/api/index.py).
 

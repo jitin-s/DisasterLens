@@ -1,4 +1,4 @@
-# DisasterLens: Cloud Deployment Guide
+### DisasterLens: Cloud Deployment Guide
 
 This guide explains how to deploy DisasterLens to **Vercel**, **Streamlit Community Cloud**, or **Docker/Render**.
 

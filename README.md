@@ -138,7 +138,7 @@ flowchart TD
 
 #### 🔬 Mathematical & Physics Formulations
 
-### 1. UN INFORM Operational Priority Index (OPI)
+### 1. United Nation INFORM Operational Priority Index (OPI)
 
 The OPI ($0 - 100$) quantifies the multi-hazard emergency triage ranking by integrating physical damage severity with demographic fragility and coping deficit:
 

@@ -132,7 +132,7 @@ def compute_operational_priority_index(
     boat_demand = np.nan_to_num(boat_demand, nan=0).astype(int)
     result["demand_sar_boats"] = np.clip(boat_demand, 0, 10)
     
-    # 2. Advanced Mobile Medical Units: demanded by high OPI & high elderly/mobility
+    # 2. Advanced Mobile Medical Units: demanded by high OPI & high elderly/mobility AND low hospital bed capacity
     elderly_r = np.nan_to_num(pd.to_numeric(result["elderly_ratio"] if "elderly_ratio" in result.columns else 0.12, errors="coerce"), nan=0.12)
     mobility_r = np.nan_to_num(pd.to_numeric(result["mobility_impaired_ratio"] if "mobility_impaired_ratio" in result.columns else 0.08, errors="coerce"), nan=0.08)
     med_demand = np.ceil((opi_score / 30.0) * (elderly_r + mobility_r) * 3.5)

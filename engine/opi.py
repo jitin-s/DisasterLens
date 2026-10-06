@@ -87,7 +87,7 @@ def compute_operational_priority_index(
     result["predicted_severity"] = np.round(predicted_severity, 4)
 
     
-    # Population exposure scaling (log-scaled to prevent mega-zones from drowning out high-risk smaller zones)
+    # Population exposure scaling (log-scaled to prevent mega-zones from drowning out high-risk smaller zones) and normalized to [0.2, 1.0] 
     pop = result["total_population"].values
     norm_exposure = np.log10(np.maximum(pop, 100.0)) / np.log10(50000.0) # max ~50k pop
     norm_exposure = np.clip(norm_exposure, 0.2, 1.0)

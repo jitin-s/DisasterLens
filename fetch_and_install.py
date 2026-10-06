@@ -35,7 +35,7 @@ def find_best_wheel_url(pkg_name: str):
         if "cp313" in fn and "win_amd64" in fn and fn.endswith(".whl"):
             return u["url"], fn
             
-    # Priority 2: cp312/cp313 abi3 win_amd64
+    ## Priority 2: cp312/cp313 abi3 win_amd64
     for u in urls:
         fn = u.get("filename", "")
         if "abi3" in fn and "win_amd64" in fn and fn.endswith(".whl"):

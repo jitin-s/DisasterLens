@@ -139,7 +139,7 @@ def compute_operational_priority_index(
     med_demand = np.nan_to_num(med_demand, nan=0).astype(int)
     result["demand_medical_clinics"] = np.clip(med_demand, 0, 8)
     
-    # 3. Clean Water & Food Ration Kits (hundreds of kits, e.g., in units of 100-packs):
+    # 3. Clean Water & Food Ration Kits (hundreds of kits, e.g., in units of 100-packs): and demanded by population size and infrastructure deficit
     pop = np.nan_to_num(pd.to_numeric(result["total_population"] if "total_population" in result.columns else 5000, errors="coerce"), nan=5000.0)
     infra_def = np.nan_to_num(pd.to_numeric(result["infrastructure_deficit"] if "infrastructure_deficit" in result.columns else 0.3, errors="coerce"), nan=0.3)
     ration_demand = np.ceil((pop / 5000.0) * (infra_def + 0.2) * 2.0)

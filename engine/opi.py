@@ -126,7 +126,7 @@ def compute_operational_priority_index(
     result["triage_color"] = [t[1] for t in triage_info]
     
     # Estimate Resource Demands (for prescriptive optimization)
-    # 1. Search & Rescue Boats: demanded when flood gauge is elevated
+    # 1. Search & Rescue Boats: demanded when flood gauge is elevated and OPI is high
     flood_depth = np.nan_to_num(pd.to_numeric(result["flood_gauge_m"] if "flood_gauge_m" in result.columns else 0.0, errors="coerce"), nan=0.0)
     boat_demand = np.where(flood_depth >= 0.8, np.ceil(flood_depth * 1.5 + (opi_score / 25.0)), 0)
     boat_demand = np.nan_to_num(boat_demand, nan=0).astype(int)

@@ -146,7 +146,7 @@ def compute_operational_priority_index(
     ration_demand = np.nan_to_num(ration_demand, nan=1).astype(int)
     result["demand_ration_kits"] = np.clip(ration_demand, 1, 20)
     
-    # 4. Heavy Generators: demanded by power grid blackout + critical facilities
+    ## 4. Heavy Generators: demanded by power grid blackout + critical facilities
     grid_pct = np.nan_to_num(pd.to_numeric(result["power_grid_status_pct"] if "power_grid_status_pct" in result.columns else 100.0, errors="coerce"), nan=100.0)
     grid_down = (100.0 - grid_pct) / 100.0
     if "hospital_bed_capacity" in result.columns:

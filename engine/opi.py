@@ -160,7 +160,7 @@ def compute_operational_priority_index(
     gen_demand = np.nan_to_num(gen_demand, nan=0).astype(int)
     result["demand_generators"] = np.clip(gen_demand, 0, 6)
     
-    # Sort descending by OPI score to form the triage queue
+    ## Sort descending by OPI score to form the triage queue
     result = result.sort_values(by="opi_score", ascending=False).reset_index(drop=True)
     result["priority_rank"] = np.arange(1, len(result) + 1)
     

@@ -423,6 +423,6 @@ DisasterLens/
 
 ---
 
-## 🛡️ License & Open-Source Commitment
+## 🛡️ License & Open-Source Commitment(License)
 
 DisasterLens is released under the **[MIT License](https://opensource.org/licenses/MIT)**. It is free and open-source software engineered to strengthen civil protection, disaster management authorities, and emergency response teams worldwide. Zero registration, subscription, or proprietary lock-in required.

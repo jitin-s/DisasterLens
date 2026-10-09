@@ -52,7 +52,7 @@
 
 ## 🌟 Executive Summary
 
-In emergency management, a disaster dashboard that merely plots static markers or historical reports is fundamentally insufficient. An uninhabited valley experiencing 2 meters of seasonal flood accumulation does not warrant higher emergency dispatch priority than a moderately flooded urban sector where an inundated geriatric nursing facility is cut off by severed bridges.
+In emergency management a disaster dashboard that merely plots static markers or historical reports is fundamentally insufficient. An uninhabited valley experiencing 2 meters of seasonal flood accumulation does not warrant higher emergency dispatch priority than a moderately flooded urban sector where an inundated geriatric nursing facility is cut off by severed bridges.
 
 **DisasterLens** bridges the gap between **raw real-time telemetry**, **predictive geophysical modeling**, and **prescriptive operations research**. It provides comprehensive situational awareness and automated emergency decision-support across **all 632 official Indian districts** and on-the-fly dynamic satellite geocoding for any village or town in India.
 

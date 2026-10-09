@@ -26,7 +26,7 @@
 
 ---
 
-### 📑 Table of Contents
+## 📑 Table of Contents
 
 - [🌟 Executive Summary](#-executive-summary)
 - [🎯 The Problem: Moving from Reactive to Predictive](#-the-problem-moving-from-reactive-to-predictive)
